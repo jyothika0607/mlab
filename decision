@@ -1,0 +1,19 @@
+import pandas as pd 
+import matplotlib.pyplot as plt 
+%matplotlib inline 
+from sklearn.datasets import load_iris 
+from sklearn import tree 
+from sklearn.tree import DecisionTreeClassifier 
+iris=load_iris() 
+iris.keys() 
+dict_keys(['data', 'target', 'frame', 'target_names', 'DESCR', 'feature_names', 
+'filename', 'data_module']) 
+df=pd.DataFrame(iris['data'],columns=iris['feature_names']) 
+df.head()
+iris.data
+iris.target
+classifier=DecisionTreeClassifier(criterion="entropy") 
+classifier.fit(iris.data,iris.target) 
+plt.figure(figsize=(15,10)) 
+tree.plot_tree(classifier,filled=True) 
+plt.show()
