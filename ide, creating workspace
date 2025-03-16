@@ -1,0 +1,23 @@
+import pandas as pd
+df=pd.read_csv("mla.csv")
+df
+import csv
+with open("mla.csv")as file:
+File=csv.reader(file)
+for lines in File:
+print(lines)
+'C:\\Users\\admin\\Documents\\1265mlalab' import pandas as pd
+df=pd.read_csv("C:\\Users\\admin\\Documents\\1265mlalab\\mla.csv")
+df
+variable=pd.read_csv(r"C:\\Users\\admin\\Documents\\1265mlalab\\mla.csv")
+variable.head()
+Bar graph:
+import matplotlib.pyplot as plt
+import numpy as np
+fruits = ['Apples', 'Bananas', 'Cherries', 'Dates']
+sales = [400, 350, 300, 450]
+plt.bar(fruits, sales)
+plt.title('Fruit Sales')
+plt.xlabel('Fruits')
+plt.ylabel('Sales')
+plt.show()
